@@ -1,0 +1,11 @@
+apiVersion: 1
+
+providers:
+  - name: "SignalGuard Dashboards"
+    orgId: 1
+    folder: "SignalGuard"
+    type: file
+    disableDeletion: false
+    editable: true
+    options:
+      path: /var/lib/grafana/dashboards

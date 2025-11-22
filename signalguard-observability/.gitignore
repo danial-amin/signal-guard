@@ -1,0 +1,7 @@
+# Basic Python & Docker ignores
+__pycache__/
+*.pyc
+.env
+.idea/
+.vscode/
+*.log
