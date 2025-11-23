@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SignalGuard Observability Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="styles.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <div>
+        <h1>SignalGuard</h1>
+        <p>Intelligent observability playground for microservices</p>
+      </div>
+      <div class="header-meta">
+        <span class="pill">Static demo (simulated data)</span>
+        <span id="last-updated">Updated: -</span>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="cards">
+        <div class="card">
+          <h2>Total requests</h2>
+          <p class="value" id="total-requests">0</p>
+          <p class="muted">Across all services since startup</p>
+        </div>
+        <div class="card">
+          <h2>Error rate</h2>
+          <p class="value" id="error-rate">0.00%</p>
+          <p class="muted" id="error-caption">System is warming up</p>
+        </div>
+        <div class="card">
+          <h2>Orders service</h2>
+          <p class="value" id="orders-requests">0</p>
+          <p class="muted" id="orders-errors">0 errors</p>
+        </div>
+        <div class="card">
+          <h2>Payments service</h2>
+          <p class="value" id="payments-requests">0</p>
+          <p class="muted" id="payments-errors">0 errors</p>
+        </div>
+      </section>
+
+      <section class="charts">
+        <div class="chart-card">
+          <div class="chart-header">
+            <h3>Requests over time</h3>
+            <p class="muted">Per service, sampled every 5 seconds (simulated)</p>
+          </div>
+          <canvas id="requests-chart"></canvas>
+        </div>
+        <div class="chart-card">
+          <div class="chart-header">
+            <h3>Error rate over time</h3>
+            <p class="muted">Aggregate error rate across services</p>
+          </div>
+          <canvas id="error-chart"></canvas>
+        </div>
+      </section>
+
+      <section class="anomalies">
+        <div class="anomaly-header">
+          <h3>Anomaly status</h3>
+          <p class="muted">
+            Simple statistical anomaly detector running on simulated Prometheus-style metrics
+          </p>
+        </div>
+        <div class="anomaly-grid" id="anomaly-grid">
+          <!-- Filled by script.js -->
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
