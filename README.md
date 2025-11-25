@@ -40,7 +40,7 @@ This is perfect for interviews—no backend required.
 
 ## 🏗️ Architecture
 
-```
+```text
 signalguard-observability
 ├── services/
 │   ├── app/                   # FastAPI microservice
