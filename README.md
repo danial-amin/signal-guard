@@ -138,8 +138,7 @@ Auto-provisioned using Docker:
 ### 🔧 Step 1 — Clone Repo
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/signalguard-observability
-cd signalguard-observability
+git clone https://github.com/danial-amin/signalguard-observability
 ```
 
 ### 🔧 Step 2 — Run the stack
